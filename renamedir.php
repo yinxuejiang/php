@@ -5,7 +5,12 @@ echo "开始测试<br>";
 $dirname="test";
 
 copydir ( $dirname, "hello" );
-
+/**
+ * [copydir 拷贝一个文件夹到另一个文件夹并重新命名文件]
+ * @param  [type] $dirsrc [被拷贝的文件夹]
+ * @param  [type] $dirto  [到的一个文件夹]
+ * @return [type] 目录    [一个新文件夹]
+ */
 function copydir($dirsrc, $dirto) {
 	if (! is_dir ( $dirsrc )) {
 		echo "目标不是目录不能复制";

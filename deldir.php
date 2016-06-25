@@ -6,7 +6,11 @@ $dirname="phpMyAdmin";
 
 deldir ( $dirname );
 
-//É¾³ýÄ¿Â¼
+/**
+ * [deldir É¾³ýÄ¿Â¼]
+ * @param  [type] $dirname [±»É¾³ýµÄÄ¿Â¼]
+ * @return [type]          [¿Õ]
+ */
 function deldir($dirname) {
 	if (file_exists ( $dirname )) {
 		$dir = opendir ( $dirname );

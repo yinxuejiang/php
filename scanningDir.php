@@ -16,6 +16,11 @@
 <body>
 <?php
 scanningDir ( "." );
+/**
+ * [scanningDir 查找出一个目录下的目录]
+ * @param  [type] $dirname [目录]
+ * @return [type] 目录列表 [所有目录的一个列表]
+ */
 function scanningDir($dirname) {
 	if (file_exists ( $dirname )) {
 		$dir = opendir ( $dirname );
@@ -33,11 +38,11 @@ function scanningDir($dirname) {
 	}
 }
 /** 
-*自动判断把gbk或gb2312编码的字符串转为utf8 
-*能自动判断输入字符串的编码类，如果本身是utf-8就不用转换，否则就转换为utf-8的字符串 
-*支持的字符编码类型是：utf-8,gbk,gb2312 
-*@$str:string 字符串 
-*/ 
+ * 自动判断把gbk或gb2312编码的字符串转为utf8 
+ * 能自动判断输入字符串的编码类，如果本身是utf-8就不用转换，否则就转换为utf-8的字符串 
+ * 支持的字符编码类型是：utf-8,gbk,gb2312 
+ * @$str:string 字符串 
+ */ 
 function yang_gbk2utf8($str){ 
     $charset = mb_detect_encoding($str,array('UTF-8','GBK','GB2312')); 
     $charset = strtolower($charset); 
